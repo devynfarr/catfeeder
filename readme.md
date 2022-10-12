@@ -1,28 +1,23 @@
-# Sweep
+# Catfeeder
 
-Sweeps the shaft of a RC [servo motor](http://en.wikipedia.org/wiki/Servo_motor#RC_servos) back and forth across 180 degrees.
+This project uses a RTC, Servo, HX711 and load-cell to implement a weight-based cat-feeder (weight of food dispensed, not weight of cat!).  The prototype hardware is based on a 3D printed auger and some central vacuum fittings, and lots of hot-glue.
+
+This project is intended to be a hardware prototype for a network-connected device with the same functionality.
 
 ## Hardware Required
 
-* Arduino Board
+* Arduino Board (developed on the Arduino Pro Mini)
 * Servo Motor
 * Hook-up wires
-* button
+* button (mainly for debugging)
+* DS3120 RTC
+* HX711
+* Load cell (developed with 1kg-rated device)
+* 3D printed components for scale
+* 3D printed components for feed auger
+* central-vaccum fittings for feed auger
 
-## Circuit
+## 3D printed components
+This is what was used while developing this code.
 
-Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the 5V pin on the Arduino board (recommend an external supply, not Arduino VCC due to high current drawn if catfood sticks in the auger). The ground wire is typically black or brown and should be connected to a ground pin on the board. The signal pin is typically yellow, orange or white and should be connected to pin 9 on the board.
-
-![](images/sweep_bb.png)
-
-## Schematic
-
-![](images/sweep_schem.png)
-
-## See also
-
-* [attach()](/docs/api.md#attach)
-* [write()](/docs/api.md#write)
-* [map()](https://www.arduino.cc/en/Reference/Map)
-* [Servo library reference](/docs/readme.md)
-* [Knob](../Knob) - Control the position of a servo with a potentiometer
+* [Thingiverse] https://www.thingiverse.com/thing:4753380
